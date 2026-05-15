@@ -76,9 +76,10 @@ const Navbar = () => {
           ))}
           <a 
             href="https://wa.me/628123456789" 
-            className="px-6 py-2.5 bg-accent text-primary font-bold rounded-full text-sm hover:bg-white transition-all shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2"
+            className="px-6 py-2.5 bg-accent text-primary font-bold rounded-full text-sm hover:bg-white transition-all shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 flex items-center gap-2"
           >
-            Konsultasi Gratis
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.148-.669-1.611-.916-2.206-.24-.579-.48-.5-.669-.51-.174-.008-.375-.01-.576-.01-.201 0-.527.075-.804.375-.276.3-.1.731-.1 1.2s.33 3.59.407 3.7c.077.11 1.56 2.382 3.778 3.336 2.218.954 2.218.636 2.615.594.397-.042 1.282-.524 1.464-1.031.182-.507.182-.941.127-1.031-.054-.09-.201-.148-.498-.297zM12 0C5.373 0 0 5.373 0 12c0 2.123.55 4.12 1.512 5.861L0 24l6.335-1.662C7.994 23.385 9.923 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.98 9.98 0 0 1-5.127-1.403l-.367-.218-3.81 1 1.018-3.71-.24-.381A9.982 9.982 0 0 1 2 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/></svg>
+            WhatsApp
           </a>
         </div>
 
@@ -118,8 +119,9 @@ const Navbar = () => {
               ))}
               <a 
                 href="https://wa.me/628123456789" 
-                className="mt-8 px-10 py-4 bg-accent text-primary font-bold rounded-full text-lg shadow-xl"
+                className="mt-8 px-10 py-4 bg-[#25D366] text-white font-bold rounded-full text-lg shadow-xl flex items-center gap-2"
               >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.148-.669-1.611-.916-2.206-.24-.579-.48-.5-.669-.51-.174-.008-.375-.01-.576-.01-.201 0-.527.075-.804.375-.276.3-.1.731-.1 1.2s.33 3.59.407 3.7c.077.11 1.56 2.382 3.778 3.336 2.218.954 2.218.636 2.615.594.397-.042 1.282-.524 1.464-1.031.182-.507.182-.941.127-1.031-.054-.09-.201-.148-.498-.297zM12 0C5.373 0 0 5.373 0 12c0 2.123.55 4.12 1.512 5.861L0 24l6.335-1.662C7.994 23.385 9.923 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.98 9.98 0 0 1-5.127-1.403l-.367-.218-3.81 1 1.018-3.71-.24-.381A9.982 9.982 0 0 1 2 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/></svg>
                 Chat WhatsApp
               </a>
             </div>
@@ -176,8 +178,9 @@ const PackageCard = ({ title, price, duration, hotel, color, benefits, image }: 
         <div className="mt-auto">
           <a 
             href={`https://wa.me/628123456789?text=Haloo%20Larissa%20Tour,%20saya%20tertarik%20dengan%20${title}`}
-            className="block w-full py-3 bg-primary text-white text-center rounded-xl font-bold hover:bg-primary-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
+            className="flex items-center justify-center gap-2 w-full py-3 bg-primary text-white text-center rounded-xl font-bold hover:bg-primary-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
           >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.148-.669-1.611-.916-2.206-.24-.579-.48-.5-.669-.51-.174-.008-.375-.01-.576-.01-.201 0-.527.075-.804.375-.276.3-.1.731-.1 1.2s.33 3.59.407 3.7c.077.11 1.56 2.382 3.778 3.336 2.218.954 2.218.636 2.615.594.397-.042 1.282-.524 1.464-1.031.182-.507.182-.941.127-1.031-.054-.09-.201-.148-.498-.297zM12 0C5.373 0 0 5.373 0 12c0 2.123.55 4.12 1.512 5.861L0 24l6.335-1.662C7.994 23.385 9.923 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.98 9.98 0 0 1-5.127-1.403l-.367-.218-3.81 1 1.018-3.71-.24-.381A9.982 9.982 0 0 1 2 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/></svg>
             Pesan Sekarang
           </a>
         </div>
@@ -218,29 +221,8 @@ const FAQItem = ({ question, answer }: { question: string, answer: string }) => 
 // --- Main App ---
 
 export default function App() {
-  const [connStatus, setConnStatus] = useState<string | null>(null);
-
-  const testConnection = async () => {
-    try {
-      const res = await fetch('/api/health');
-      const data = await res.json();
-      setConnStatus(data.status === 'ok' ? 'Connected' : 'Error');
-    } catch (e) {
-      setConnStatus('Failed');
-    }
-  };
-
   return (
     <div className="min-h-screen bg-white text-gray-800 font-sans selection:bg-accent/30 text-[15px]">
-      {/* Dev Debug Tab (Only visible in some contexts or if small) */}
-      <div className="fixed top-20 right-4 z-[100] opacity-30 hover:opacity-100 transition-opacity">
-        <button 
-          onClick={testConnection}
-          className="text-[10px] bg-black text-white px-2 py-1 rounded"
-        >
-          {connStatus ? `Status: ${connStatus}` : 'Test API'}
-        </button>
-      </div>
       <Navbar />
 
       {/* Hero Section */}
@@ -548,10 +530,10 @@ export default function App() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <a 
               href="https://wa.me/628123456789" 
-              className="group px-12 py-5 bg-accent text-primary font-bold rounded-full text-xl hover:bg-white transition-all shadow-glow flex items-center gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2"
+              className="px-12 py-5 bg-[#25D366] text-white font-bold rounded-full text-xl hover:bg-[#128C7E] transition-all shadow-glow flex items-center justify-center gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 w-full sm:w-auto"
             >
-              <Phone className="group-hover:animate-bounce" />
-              Chat via WhatsApp
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.148-.669-1.611-.916-2.206-.24-.579-.48-.5-.669-.51-.174-.008-.375-.01-.576-.01-.201 0-.527.075-.804.375-.276.3-.1.731-.1 1.2s.33 3.59.407 3.7c.077.11 1.56 2.382 3.778 3.336 2.218.954 2.218.636 2.615.594.397-.042 1.282-.524 1.464-1.031.182-.507.182-.941.127-1.031-.054-.09-.201-.148-.498-.297zM12 0C5.373 0 0 5.373 0 12c0 2.123.55 4.12 1.512 5.861L0 24l6.335-1.662C7.994 23.385 9.923 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.98 9.98 0 0 1-5.127-1.403l-.367-.218-3.81 1 1.018-3.71-.24-.381A9.982 9.982 0 0 1 2 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/></svg>
+              Chat ke WhatsApp
             </a>
             <div className="flex items-center gap-2 text-white/70">
               <span className="flex -space-x-2">
@@ -638,17 +620,18 @@ export default function App() {
       <div className="fixed bottom-6 right-6 z-40">
         <a 
           href="https://wa.me/628123456789" 
-          className="flex items-center gap-3 bg-green-500 text-white pl-4 pr-6 py-3 rounded-full shadow-2xl hover:scale-105 transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-4"
+          className="flex items-center justify-center w-16 h-16 bg-[#25D366] text-white rounded-full shadow-2xl hover:scale-110 transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-4 ring-offset-white relative group"
+          aria-label="Chat WhatsApp"
         >
-          <div className="relative">
-            <Phone size={24} />
-            <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-ping"></span>
-            <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"></span>
-          </div>
-          <div className="flex flex-col">
-            <span className="text-[10px] font-bold uppercase opacity-80 leading-none">Chat Sekarang</span>
-            <span className="text-sm font-bold leading-none mt-0.5">Admin Larissa</span>
-          </div>
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.148-.669-1.611-.916-2.206-.24-.579-.48-.5-.669-.51-.174-.008-.375-.01-.576-.01-.201 0-.527.075-.804.375-.276.3-.1.731-.1 1.2s.33 3.59.407 3.7c.077.11 1.56 2.382 3.778 3.336 2.218.954 2.218.636 2.615.594.397-.042 1.282-.524 1.464-1.031.182-.507.182-.941.127-1.031-.054-.09-.201-.148-.498-.297zM12 0C5.373 0 0 5.373 0 12c0 2.123.55 4.12 1.512 5.861L0 24l6.335-1.662C7.994 23.385 9.923 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.98 9.98 0 0 1-5.127-1.403l-.367-.218-3.81 1 1.018-3.71-.24-.381A9.982 9.982 0 0 1 2 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/></svg>
+          <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full animate-ping"></span>
+          <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full text-[10px] flex items-center justify-center font-bold">1</span>
+          
+          {/* Tooltip */}
+          <span className="absolute left-0 -translate-x-[110%] bg-white text-primary text-xs font-bold px-3 py-2 rounded-lg shadow-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-gray-100 pointer-events-none">
+            Tanya Admin Larissa
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-[50%] w-2 h-2 bg-white border-r border-t border-gray-100 rotate-45"></div>
+          </span>
         </a>
       </div>
     </div>
