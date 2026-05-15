@@ -369,12 +369,8 @@ export default function App() {
       </section>
 
       {/* Packages Section */}
-      <section id="packages" className="py-24 bg-cream relative overflow-hidden">
-        {/* Decorative elements */}
-        <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -ml-48 -mb-48"></div>
-        
-        <div className="container mx-auto px-6 relative z-10">
+      <section id="packages" className="py-24 bg-cream">
+        <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div className="max-w-2xl text-left">
               <h2 className="text-sm font-bold text-accent uppercase tracking-[0.2em] mb-4">Pilihan Paket</h2>
