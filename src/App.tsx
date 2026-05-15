@@ -15,6 +15,7 @@ import {
   Star,
   Quote
 } from 'lucide-react';
+import { APP_CONFIG } from './constants';
 
 // --- Components ---
 
@@ -44,8 +45,8 @@ const Navbar = () => {
         <div className="flex items-center gap-3">
           <div className="bg-white/90 backdrop-blur-sm p-1.5 rounded-xl shadow-md border border-white/50 flex items-center justify-center overflow-hidden w-12 h-12 shrink-0">
             <img 
-              src="/logo_larissa.jpeg" 
-              alt="Larissa Logo" 
+              src={APP_CONFIG.logo} 
+              alt={`${APP_CONFIG.name} Logo`} 
               className="w-full h-full object-contain scale-110"
               referrerPolicy="no-referrer"
             />
@@ -53,12 +54,12 @@ const Navbar = () => {
           <div className="flex flex-col items-start leading-tight">
              <div className="flex items-baseline gap-1">
                <span className={`text-xl font-serif font-bold tracking-tight ${isScrolled ? 'text-primary' : 'text-white'}`}>
-                 Larissa
+                 {APP_CONFIG.name.split(' ')[0]}
                </span>
-               <span className="text-accent italic font-serif text-xl font-medium">Tour</span>
+               <span className="text-accent italic font-serif text-xl font-medium">{APP_CONFIG.name.split(' ')[1]}</span>
              </div>
              <div className={`text-[8px] uppercase tracking-[0.25em] font-bold ${isScrolled ? 'text-gray-400' : 'text-accent/80'}`}>
-               & Travel Service
+               {APP_CONFIG.subName}
              </div>
           </div>
         </div>
@@ -75,11 +76,11 @@ const Navbar = () => {
             </a>
           ))}
           <a 
-            href="https://wa.me/628123456789" 
+            href={`https://wa.me/${APP_CONFIG.whatsapp.number}?text=${encodeURIComponent(APP_CONFIG.whatsapp.defaultMessage)}`} 
             className="px-6 py-2.5 bg-accent text-primary font-bold rounded-full text-sm hover:bg-white transition-all shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 flex items-center gap-2"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.148-.669-1.611-.916-2.206-.24-.579-.48-.5-.669-.51-.174-.008-.375-.01-.576-.01-.201 0-.527.075-.804.375-.276.3-.1.731-.1 1.2s.33 3.59.407 3.7c.077.11 1.56 2.382 3.778 3.336 2.218.954 2.218.636 2.615.594.397-.042 1.282-.524 1.464-1.031.182-.507.182-.941.127-1.031-.054-.09-.201-.148-.498-.297zM12 0C5.373 0 0 5.373 0 12c0 2.123.55 4.12 1.512 5.861L0 24l6.335-1.662C7.994 23.385 9.923 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.98 9.98 0 0 1-5.127-1.403l-.367-.218-3.81 1 1.018-3.71-.24-.381A9.982 9.982 0 0 1 2 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/></svg>
-            WhatsApp
+            {APP_CONFIG.whatsapp.buttons.navbar}
           </a>
         </div>
 
@@ -118,11 +119,11 @@ const Navbar = () => {
                 </a>
               ))}
               <a 
-                href="https://wa.me/628123456789" 
+                href={`https://wa.me/${APP_CONFIG.whatsapp.number}?text=${encodeURIComponent(APP_CONFIG.whatsapp.defaultMessage)}`} 
                 className="mt-8 px-10 py-4 bg-[#25D366] text-white font-bold rounded-full text-lg shadow-xl flex items-center gap-2"
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.148-.669-1.611-.916-2.206-.24-.579-.48-.5-.669-.51-.174-.008-.375-.01-.576-.01-.201 0-.527.075-.804.375-.276.3-.1.731-.1 1.2s.33 3.59.407 3.7c.077.11 1.56 2.382 3.778 3.336 2.218.954 2.218.636 2.615.594.397-.042 1.282-.524 1.464-1.031.182-.507.182-.941.127-1.031-.054-.09-.201-.148-.498-.297zM12 0C5.373 0 0 5.373 0 12c0 2.123.55 4.12 1.512 5.861L0 24l6.335-1.662C7.994 23.385 9.923 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.98 9.98 0 0 1-5.127-1.403l-.367-.218-3.81 1 1.018-3.71-.24-.381A9.982 9.982 0 0 1 2 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/></svg>
-                Chat WhatsApp
+                {APP_CONFIG.whatsapp.buttons.navbar}
               </a>
             </div>
           </motion.div>
@@ -177,11 +178,11 @@ const PackageCard = ({ title, price, duration, hotel, color, benefits, image }: 
 
         <div className="mt-auto">
           <a 
-            href={`https://wa.me/628123456789?text=Haloo%20Larissa%20Tour,%20saya%20tertarik%20dengan%20${title}`}
+            href={`https://wa.me/${APP_CONFIG.whatsapp.number}?text=Haloo%20Larissa%20Tour,%20saya%20tertarik%20dengan%20${encodeURIComponent(title)}`}
             className="flex items-center justify-center gap-2 w-full py-3 bg-primary text-white text-center rounded-xl font-bold hover:bg-primary-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.148-.669-1.611-.916-2.206-.24-.579-.48-.5-.669-.51-.174-.008-.375-.01-.576-.01-.201 0-.527.075-.804.375-.276.3-.1.731-.1 1.2s.33 3.59.407 3.7c.077.11 1.56 2.382 3.778 3.336 2.218.954 2.218.636 2.615.594.397-.042 1.282-.524 1.464-1.031.182-.507.182-.941.127-1.031-.054-.09-.201-.148-.498-.297zM12 0C5.373 0 0 5.373 0 12c0 2.123.55 4.12 1.512 5.861L0 24l6.335-1.662C7.994 23.385 9.923 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.98 9.98 0 0 1-5.127-1.403l-.367-.218-3.81 1 1.018-3.71-.24-.381A9.982 9.982 0 0 1 2 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/></svg>
-            Pesan Sekarang
+            {APP_CONFIG.whatsapp.buttons.packages}
           </a>
         </div>
       </div>
@@ -230,7 +231,7 @@ export default function App() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&q=80&w=2000"
+            src={APP_CONFIG.images.hero}
             alt="Kaaba Mecca"
             className="w-full h-full object-cover scale-105"
             referrerPolicy="no-referrer"
@@ -264,10 +265,10 @@ export default function App() {
                 <Plane size={20} />
               </a>
               <a 
-                href="https://wa.me/628123456789" 
+                href={`https://wa.me/${APP_CONFIG.whatsapp.number}?text=${encodeURIComponent(APP_CONFIG.whatsapp.defaultMessage)}`} 
                 className="px-10 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white font-bold rounded-full hover:bg-white/20 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
               >
-                Hubungi Konsultan
+                {APP_CONFIG.whatsapp.buttons.hero}
               </a>
             </div>
           </motion.div>
@@ -368,8 +369,12 @@ export default function App() {
       </section>
 
       {/* Packages Section */}
-      <section id="packages" className="py-24 bg-cream">
-        <div className="container mx-auto px-6">
+      <section id="packages" className="py-24 bg-cream relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -ml-48 -mb-48"></div>
+        
+        <div className="container mx-auto px-6 relative z-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div className="max-w-2xl text-left">
               <h2 className="text-sm font-bold text-accent uppercase tracking-[0.2em] mb-4">Pilihan Paket</h2>
@@ -387,7 +392,7 @@ export default function App() {
               duration="9"
               hotel="Bintang 3 (Radius 500m)"
               color="bg-emerald-500"
-              image="https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&q=80&w=1000"
+              image={APP_CONFIG.images.packageHemat}
               benefits={[
                 'Maskapai Ekonomi',
                 'Kamar Quad (Ber-4)',
@@ -402,7 +407,7 @@ export default function App() {
               duration="12"
               hotel="Bintang 4 (Radius 200m)"
               color="bg-accent"
-              image="https://images.unsplash.com/photo-1565552645632-d7c5f7fe16a1?auto=format&fit=crop&q=80&w=1000"
+              image={APP_CONFIG.images.packageReguler}
               benefits={[
                 'Saudi Airlines (Direct)',
                 'Kamar Triple/Double',
@@ -417,7 +422,7 @@ export default function App() {
               duration="15"
               hotel="Bintang 5 (Depan Masjid)"
               color="bg-blue-600"
-              image="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&q=80&w=1000"
+              image={APP_CONFIG.images.packageTurki}
               benefits={[
                 'Wisata Istanbul & Bursa',
                 'Hagia Sophia & Blue Mosque',
@@ -459,12 +464,7 @@ export default function App() {
             
             <div className="relative">
               <div className="grid grid-cols-2 gap-4">
-                 {[
-                   'https://images.unsplash.com/photo-1518391846015-55a9cc003b25?auto=format&fit=crop&q=80&w=500',
-                   'https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&q=80&w=500',
-                   'https://images.unsplash.com/photo-1590076202481-26cf462d7c5e?auto=format&fit=crop&q=80&w=500',
-                   'https://images.unsplash.com/photo-1564769625905-50e93635e743?auto=format&fit=crop&q=80&w=500',
-                 ].map((img, i) => (
+                 {APP_CONFIG.images.gallery.map((img, i) => (
                    <motion.div 
                     key={i}
                     whileHover={{ scale: 1.05 }}
@@ -529,11 +529,11 @@ export default function App() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <a 
-              href="https://wa.me/628123456789" 
+              href={`https://wa.me/${APP_CONFIG.whatsapp.number}?text=${encodeURIComponent(APP_CONFIG.whatsapp.defaultMessage)}`} 
               className="px-12 py-5 bg-[#25D366] text-white font-bold rounded-full text-xl hover:bg-[#128C7E] transition-all shadow-glow flex items-center justify-center gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 w-full sm:w-auto"
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.148-.669-1.611-.916-2.206-.24-.579-.48-.5-.669-.51-.174-.008-.375-.01-.576-.01-.201 0-.527.075-.804.375-.276.3-.1.731-.1 1.2s.33 3.59.407 3.7c.077.11 1.56 2.382 3.778 3.336 2.218.954 2.218.636 2.615.594.397-.042 1.282-.524 1.464-1.031.182-.507.182-.941.127-1.031-.054-.09-.201-.148-.498-.297zM12 0C5.373 0 0 5.373 0 12c0 2.123.55 4.12 1.512 5.861L0 24l6.335-1.662C7.994 23.385 9.923 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.98 9.98 0 0 1-5.127-1.403l-.367-.218-3.81 1 1.018-3.71-.24-.381A9.982 9.982 0 0 1 2 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/></svg>
-              Chat ke WhatsApp
+              {APP_CONFIG.whatsapp.buttons.cta}
             </a>
             <div className="flex items-center gap-2 text-white/70">
               <span className="flex -space-x-2">
@@ -553,8 +553,8 @@ export default function App() {
               <div className="flex items-center gap-4 mb-8">
                  <div className="bg-white p-2 rounded-2xl shadow-xl w-16 h-16 flex items-center justify-center overflow-hidden shrink-0">
                     <img 
-                      src="/logo_larissa.jpeg" 
-                      alt="Larissa Logo" 
+                      src={APP_CONFIG.logo} 
+                      alt={`${APP_CONFIG.name} Logo`} 
                       className="w-full h-full object-contain scale-110" 
                       referrerPolicy="no-referrer"
                     />
@@ -562,12 +562,12 @@ export default function App() {
                  <div className="flex flex-col items-start leading-tight">
                    <div className="flex items-baseline gap-1">
                      <span className="text-2xl font-serif font-bold tracking-tight text-white">
-                       Larissa
+                        {APP_CONFIG.name.split(' ')[0]}
                      </span>
-                     <span className="text-accent italic font-serif text-2xl font-medium">Tour</span>
+                     <span className="text-accent italic font-serif text-2xl font-medium">{APP_CONFIG.name.split(' ')[1]}</span>
                    </div>
                    <div className="text-[10px] uppercase tracking-[0.3em] font-bold text-accent/60 mt-1">
-                     & Travel Service
+                     {APP_CONFIG.subName}
                    </div>
                  </div>
               </div>
@@ -619,7 +619,7 @@ export default function App() {
       {/* Floating WhatsApp */}
       <div className="fixed bottom-6 right-6 z-40">
         <a 
-          href="https://wa.me/628123456789" 
+          href={`https://wa.me/${APP_CONFIG.whatsapp.number}?text=${encodeURIComponent(APP_CONFIG.whatsapp.defaultMessage)}`} 
           className="flex items-center justify-center w-16 h-16 bg-[#25D366] text-white rounded-full shadow-2xl hover:scale-110 transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-4 ring-offset-white relative group"
           aria-label="Chat WhatsApp"
         >
@@ -629,7 +629,7 @@ export default function App() {
           
           {/* Tooltip */}
           <span className="absolute left-0 -translate-x-[110%] bg-white text-primary text-xs font-bold px-3 py-2 rounded-lg shadow-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-gray-100 pointer-events-none">
-            Tanya Admin Larissa
+            {APP_CONFIG.whatsapp.buttons.floating}
             <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-[50%] w-2 h-2 bg-white border-r border-t border-gray-100 rotate-45"></div>
           </span>
         </a>
